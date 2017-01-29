@@ -49,33 +49,33 @@ public class AddMovieActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Movie movie= new Movie();
-                Log.d("demo","In onClick method");
+
                 et = (EditText) findViewById(R.id.editTextName);
                 movie.setName(et.getText().toString().trim());
-                Log.d("demo","In name added");
+
                 et = (EditText) findViewById(R.id.editTextDescription);
                 movie.setDescription(et.getText().toString().trim());
-                Log.d("demo","In description added");
+
                 et = (EditText) findViewById(R.id.editTextYear);
                 String temp= et.getText().toString().trim();
                 if(temp.equals("")||temp==null){
                     movie.setYear(0);
                 }else{
                     movie.setYear(Integer.parseInt(temp));
-                    Log.d("demo","In year added");
+
                 }
 
                 et = (EditText) findViewById(R.id.editTextIMDBLink);
                 movie.setImdbLink(et.getText().toString().trim());
-                Log.d("demo","In imdblink added");
+
                 tv = (TextView) findViewById(R.id.textViewRatingOutput);
                 temp= tv.getText().toString().trim();
                 movie.setRating(Integer.parseInt(temp));
-                Log.d("demo","In rating added");
+
                 Spinner mySpinner=(Spinner) findViewById(R.id.spinnerGenre);
                 temp= mySpinner.getSelectedItem().toString();
                 movie.setGenre(temp);
-                Log.d("demo","In genre added");
+
                 if(movie.getName().equals("") || movie.getName().length()>50){
                     Toast.makeText(AddMovieActivity.this,getResources().getString(R.string.error_name),Toast.LENGTH_SHORT).show();
                 }else if(movie.getDescription().equals("") || movie.getDescription().length()>1000){

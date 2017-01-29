@@ -11,16 +11,6 @@
     tools:context="com.mad.myfavoritemovies.MainActivity">
 
     <Button
-        android:text="@string/show_list_by_rating"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonByYear"
-        android:layout_alignLeft="@+id/buttonByYear"
-        android:layout_alignStart="@+id/buttonByYear"
-        android:layout_marginTop="18dp"
-        android:id="@+id/buttonByRating" />
-
-    <Button
         android:text="@string/add_movie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +18,10 @@
         android:id="@+id/buttonAddMovie"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:textAllCaps="false" />
 
     <Button
         android:text="@string/show_list_by_year"
@@ -38,7 +31,10 @@
         android:id="@+id/buttonByYear"
         android:layout_below="@+id/buttonDeleteMovie"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:textAllCaps="false" />
 
     <Button
         android:text="@string/edit"
@@ -48,7 +44,10 @@
         android:layout_below="@+id/buttonAddMovie"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:textAllCaps="false" />
 
     <Button
         android:text="@string/delete_movie"
@@ -58,5 +57,20 @@
         android:layout_below="@+id/buttonEdit"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp" />
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:text="@string/show_list_by_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/buttonByRating"
+        android:layout_below="@+id/buttonByYear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:textAllCaps="false" />
 </RelativeLayout>

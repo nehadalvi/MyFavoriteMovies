@@ -1,7 +1,6 @@
 package com.mad.myfavoritemovies;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+
 
 import java.io.Serializable;
 import java.util.Comparator;
@@ -11,7 +10,7 @@ import java.util.Comparator;
  */
 
 public class Movie implements Serializable{
-     private String name,description,imdbLink,genre;
+    private String name,description,imdbLink,genre;
     private int year,rating;
 
     public Movie(String name, String description, String imdbLink, String genre, int year, int rating) {
@@ -25,6 +24,7 @@ public class Movie implements Serializable{
 
     public Movie() {
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -96,7 +96,8 @@ public class Movie implements Serializable{
             return movieYear1-movieYear2;
 
 
-        }};
+        }
+    };
 
     public static Comparator<Movie> MovieRating = new Comparator<Movie>() {
 
@@ -105,23 +106,8 @@ public class Movie implements Serializable{
             int movieRating1 = m1.getRating();
             int movieRating2 = m2.getRating();
 
-	   /*For ascending order*/
+	   /*For descending order*/
             return movieRating2-movieRating1;
         }
     };
-/*
-    @Override
-    public int compareTo(Movie movie) {
-        int compare = this.year.compareTo(movie.year);
-        if(compare < 0){
-            return 1;
-        }
-        else if(compare > 0){
-            return -1;
-        }else {
-            return 0;
-        }
-    }*/
-
-
 }

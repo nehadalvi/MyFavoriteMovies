@@ -14,7 +14,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddMovieActivity" />
+        <activity android:name=".AddMovieActivity"
+            android:label="Add Movie">
+        </activity>
+
+        <activity android:name=".EditMovieActivity"
+            android:label="Edit Movie">
+        </activity>
+
         <activity android:name=".MovieByYearActivity"
             android:label="Movie By Year">
             <intent-filter>
