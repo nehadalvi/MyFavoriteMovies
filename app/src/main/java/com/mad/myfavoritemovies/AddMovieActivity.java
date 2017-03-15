@@ -1,5 +1,6 @@
 package com.mad.myfavoritemovies;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.icu.text.LocaleDisplayNames;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,8 @@ public class AddMovieActivity extends AppCompatActivity {
     //private Movie movie;
     EditText et;
     TextView tv;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,4 +98,6 @@ public class AddMovieActivity extends AppCompatActivity {
         });
 
     }
+
+
 }
