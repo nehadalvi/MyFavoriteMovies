@@ -85,6 +85,7 @@ public class Movie implements Serializable{
                 ", rating=" + rating +
                 '}';
     }
+
     public static Comparator<Movie> MovieYear = new Comparator<Movie>() {
 
         public int compare(Movie m1, Movie m2) {

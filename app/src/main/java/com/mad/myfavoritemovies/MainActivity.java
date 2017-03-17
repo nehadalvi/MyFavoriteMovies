@@ -107,10 +107,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonByYear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("com.mad.myfavoritemovies.intent.action.VIEW1");
-                intent.addCategory(Intent.CATEGORY_DEFAULT);
-                intent.putExtra(SORT_KEY_YEAR,movies);
-                startActivity(intent);
+                if(movies.size()!=0) {
+                    Intent intent = new Intent("com.mad.myfavoritemovies.intent.action.VIEW1");
+                    intent.addCategory(Intent.CATEGORY_DEFAULT);
+                    intent.putExtra(SORT_KEY_YEAR, movies);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(MainActivity.this,"No movies found!",Toast.LENGTH_LONG).show();
+                }
 
             }
         });
@@ -118,10 +122,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonByRating).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("com.mad.myfavoritemovies.intent.action.VIEW2");
-                intent.addCategory(Intent.CATEGORY_DEFAULT);
-                intent.putExtra(SORT_KEY_RATING, movies);
-                startActivity(intent);
+                if(movies.size()!=0){
+                    Intent intent = new Intent("com.mad.myfavoritemovies.intent.action.VIEW2");
+                    intent.addCategory(Intent.CATEGORY_DEFAULT);
+                    intent.putExtra(SORT_KEY_RATING, movies);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(MainActivity.this,"No movies found!",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
